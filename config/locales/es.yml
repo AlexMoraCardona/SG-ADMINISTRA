@@ -1,0 +1,107 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            nro_document:
+              blank: 'sin diligenciar'          
+            name:
+              blank: 'sin diligenciar'          
+            username:
+              blank: 'sin diligenciar'          
+            email:
+              blank: 'sin diligenciar'          
+            password:
+              blank: 'sin diligenciar'   
+            nro_document:
+              taken: 'ya existe'         
+            username:
+              taken: 'ya existe'         
+            email:
+              taken: 'ya existe'    
+    models:
+      user: Usuario
+      level: Nivel
+    attributes:
+      user:
+        title: 'Usuarios:'  
+        name: 'Nombre:'
+        nro_document: 'Número de documento:'
+        email: 'email:'
+        password: 'Clave:'
+        state: 'Estado:'
+        level_id: 'Nivel:'
+        username: 'Usuario:'
+        phone: 'Teléfono:'
+      session:
+        login: 'Usuario ó correo electrónico:'
+        password: 'Clave:'
+      level:
+        state: 'Estado'
+        level_user: 'Nivel'
+        restriction: 'Restricción'
+        restriction_count: ' Días restricción'  
+  common:
+    return: 'Retornar'
+    not_logged_in: 'Ingresa con tu login y clave de acceso o crea una cuenta!'
+    submit: 'Guardar'
+    submitlog: 'Ingresar'
+    confirm: 'Desea cerrar sesión?'
+    name: 'Nombre'
+    edit: 'Editar'
+    delete: 'Eliminar'
+    show: 'Ver'
+    na: 'NA'
+    no_cumple: 'No Cumple'
+    si_cumple: 'Si Cumple'
+    no_aplica: 'No Aplica'
+    si_aplica: 'Si Aplica'
+    go: 'Ingresar'
+    update: 'Actualizar'
+  authentication:
+    users:
+      new:
+        title: 'Ingresar Usuario'
+      index:
+        title: 'Usuarios'  
+        name: 'Nombre'
+        nro_document: 'Número de documento'
+        email: 'Email'
+        password: 'Clave'
+        state: 'Estado'
+        level_id: 'Nivel'
+      edit:
+        title: 'Editar Usuario'
+        activity: 'Actividad'
+    sessions:
+      new:
+        title: 'Acceso Sistema CONESST'   
+        failed: 'Ingreso fallido'
+        created: 'Ingreso de sesión'
+      create:
+        failed: 'Autenticación fallida'
+  shared: 
+    header:
+      title: 'ADMINISTRACIÓN DE CANCHAS'     
+      login:  'Iniciar Sesión'
+      register: 'Registrarse'
+      logout: 'Cerrar Sesión' 
+  levels:
+    new:
+      title: 'Ingresar Nivel'
+    index:
+      title: 'Niveles'  
+      state: 'Estado'
+      level_user: 'Nivel'
+      restriction: 'Restricción'
+      restriction_count: 'Días restricción'  
+    edit:
+      title: 'Editar Nivel'
+
+
+
+
+
+
+

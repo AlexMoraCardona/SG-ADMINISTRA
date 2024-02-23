@@ -31,7 +31,16 @@ module SGAdministra
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    #available languages
+    config.i18n.available_locales = [:en, :es]
+    #lenguage by default
+    config.i18n.default_locale = :es 
+
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.active_storage.replace_on_assign_to_many = false
   end
 end
+
+

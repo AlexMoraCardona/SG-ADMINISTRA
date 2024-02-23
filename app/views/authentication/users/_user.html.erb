@@ -1,0 +1,10 @@
+<tr>
+    <td><%= user.nro_document %></td>
+    <td><%= user.name %></td>
+    <td><%= user.username %></td>
+    <td><%= user.email %></td>
+    <td><%= user.label_state(user.state) %></td>
+    <td><%= user.label_level_user(user.level_id) %></td>
+    <td><%= link_to t('common.edit'), edit_user_path(user), class: 'btn btn-xs btn-primary'  %></td>
+    
+</tr>

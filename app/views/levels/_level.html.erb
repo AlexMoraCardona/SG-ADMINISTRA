@@ -1,0 +1,12 @@
+<tr>
+    <td><%= level.id %></td>
+    <td><%= level.name_state(level.state) %></td>
+    <td><%= level.name_level_user(level.level_user) %></td>
+    <td><%= level.name_restriction(level.restriction) %></td>
+    <td><%= level.restriction_count %></td>
+
+    <td><%= link_to t('common.edit'), edit_level_path(level), class: 'btn btn-xs btn-primary'  %></td>
+    
+</tr>
+
+
