@@ -3,11 +3,17 @@
 <%= stylesheet_link_tag "calendar", "data-turbo-track": "reload" %>
 <div class="container">
     <h2 class="display-5">Calendario   <%= @adm_calendar.year %></h2>
+    <hr>
 </div> 
-<hr>
 <% m = 1 %> 
 <div class="container col-12 card p-5">
     <div class="row g-7">
+        <div class="col-sm-2" >
+            <div style="background-color: #0979b0;">Día disponible</div>
+        </div>
+        <div class="col-sm-1" >
+            <div></div>
+        </div>
         <div class="col-sm-2" >
             <div style="background-color: #d41717;">Día no disponible</div>
         </div>
