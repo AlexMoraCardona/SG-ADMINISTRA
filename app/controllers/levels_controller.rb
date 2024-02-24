@@ -1,6 +1,6 @@
 class LevelsController < ApplicationController
     def index
-        if  Current.user && Current.user.level == 2
+        if  Current.user && Current.user.level_id == 3
             @levels = Level.all 
         else
              redirect_to new_session_path, alert: t('common.not_logged_in')      

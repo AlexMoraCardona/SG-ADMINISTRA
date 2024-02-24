@@ -1,0 +1,9 @@
+<tr>
+    <td><%= square.id %></td>
+    <td><%= square.name_state(square.state) %></td>
+    <td><%= square.name %></td>
+    <td><%= square.address %></td>
+
+    <td><%= link_to t('common.edit'), edit_square_path(square), class: 'btn btn-sm btn-primary'  %></td>
+    
+</tr>

@@ -1,0 +1,60 @@
+<%= render 'shared/header' %>
+
+<div class="container col-11 card p-5">
+    <br>
+
+    <div class="container">
+        <h4 class="display-7"><%= @calendar.name_day %>, <%= @calendar.day %> de <%= @calendar.label_month(@calendar.month) %> de <%= @calendar.year %></h4>
+        <%= link_to '<button class="btn btn-sm btn-primary" type="button">Retornar</button>'.html_safe, calendar_path(Date.today.year) %>
+    </div> 
+    <hr>
+    <div class="container">
+        <h4 class="display-8">Disponibilidad horarios</h4>
+    </div> 
+    
+    <hr>
+    <div class="container col-11 card p-5">
+        <table class="table table-hover">
+            <thead> 
+                <tr>
+                    <th scope="col"><%= t('activity.place.place_reserva') %></th>
+                    <th scope="col"><%= t('activity.square.name') %></th>
+                    <th scope="col"><%= t('activity.state') %></th>
+                    <th scope="col"><%= t('.user_id') %></th>
+                    <th scope="col"><%= t('common.reser') %></th>
+                </tr>
+            </thead>
+            <% @activities.where("calendar_id = ?", @calendar.id).each do |activity| %>
+                <tbody>
+                    <tr>
+                        <td><%= activity.place.place_reserva %></td>
+                        <td><%= activity.square.name %></td>
+                        <td><%= activity.label_state(activity.state) %></td>
+                        <% if Current.user.id == 3 then %>
+                            <td></td>
+                        <% else %>
+                            <td><%= activity.user.username %></td>
+                        <% end %>
+
+                        <% if Current.user.level_id == 3 then %>
+                            <td><%= link_to t('common.edit'), edit_activity_path(activity), class: 'btn btn-sm btn-primary'  %></td>
+                        <% else %>
+                            <% if activity.state == 0 then %>
+                                <td><%= link_to t('common.reser'), reser_path(activity), class: 'btn btn-sm btn-primary'  %></td>
+                            <% else %>
+                                <td></td>
+                            <% end %>    
+                        <% end %>
+                
+                    </tr>
+                </tbody>   
+            <% end %>  
+        </table
+    </div> 
+    
+    <br>
+    <div>
+        <%= link_to '<button class="btn btn-primary" type="button">Retornar</button>'.html_safe, calendar_path(Date.today.year) %>
+    </div>
+</div> 
+

@@ -1,6 +1,6 @@
 <%= render 'shared/header' %>
-<%= render 'shared/header2' %>
 
+<%= render 'shared/header2' %>
 
 <br>
 <div class="container col-11 card p-5">
@@ -10,7 +10,7 @@
             </div> 
         </div>
         <div>
-            <%= link_to t('.create_level'), new_level_path, class: 'btn btn-xs btn-primary'  %>
+            <%= link_to t('.create_place'), new_place_path, class: 'btn btn-xs btn-primary'  %>
         </div>
         <hr>
     <table class="table table-hover">
@@ -18,18 +18,14 @@
             <tr>
                 <th scope="col"><%= t('.id') %></th>
                 <th scope="col"><%= t('.state') %></th>
-                <th scope="col"><%= t('.level_user') %></th>
-                <th scope="col"><%= t('.restriction') %></th>
-                <th scope="col"><%= t('.restriction_count') %></th>
+                <th scope="col"><%= t('.place_reserva') %></th>
 
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            <%= render partial: 'level', collection: @levels  %>  
+            <%= render partial: 'place', collection: @places  %>  
         </tbody>      
     </table>
 </div>
 <br>
-
- 

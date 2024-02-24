@@ -23,6 +23,11 @@ es:
     models:
       user: Usuario
       level: Nivel
+      adm_calendar: Administración Calendario
+      calendar: Calendario
+      activity: Reserva
+      square: Cancha
+      place: Horarios
     attributes:
       user:
         title: 'Usuarios:'  
@@ -42,7 +47,34 @@ es:
         level_user: 'Nivel'
         restriction: 'Restricción'
         restriction_count: ' Días restricción'  
+      adm_calendar:
+        year: 'Año:'
+        bisiesto: 'Año bisiesto:'
+        day_initial: 'Primer día del año:'
+        generated: 'Caledario creado:' 
+        generatedactivities: 'Actividades creadas:' 
+      calendar:
+        day: 'Día:'
+        month: 'Mes:'
+        year: 'Año:'
+        day_vigente: 'Día activo' 
+        name_day: 'Nombre día'
+        adm_calendar_id: 'Adm calendario' 
+      activity:
+        state: 'Estado:'
+        observation: 'Observaciones:'
+        calendar_id: 'Calendario:'
+        user_id: 'Usuario:'   
+        square_id: 'Cancha'
+      square:
+        state: 'Estado:'
+        name: 'Nombre:'
+        address: 'Ubicación:'  
+      place:
+        state: 'Estado:'
+        place_reserva: 'Horario:'
   common:
+    reser: 'Reservar'
     return: 'Retornar'
     not_logged_in: 'Ingresa con tu login y clave de acceso o crea una cuenta!'
     submit: 'Guardar'
@@ -59,6 +91,8 @@ es:
     si_aplica: 'Si Aplica'
     go: 'Ingresar'
     update: 'Actualizar'
+    generar_calendar: 'Generar Calendario'
+    generar_activities: 'Generar Actividades'
   authentication:
     users:
       new:
@@ -76,11 +110,12 @@ es:
         activity: 'Actividad'
     sessions:
       new:
-        title: 'Acceso Sistema CONESST'   
+        title: 'Administración de Canchas'   
         failed: 'Ingreso fallido'
         created: 'Ingreso de sesión'
       create:
         failed: 'Autenticación fallida'
+        created: 'Ingreso exitoso'
   shared: 
     header:
       title: 'ADMINISTRACIÓN DE CANCHAS'     
@@ -96,9 +131,94 @@ es:
       level_user: 'Nivel'
       restriction: 'Restricción'
       restriction_count: 'Días restricción'  
+      create_level: 'Crear Nivel'
     edit:
       title: 'Editar Nivel'
-
+  adm_calendars:
+      new:  
+        title: 'Nuevo calendario'
+      index:
+        create_calendar: 'Crear calendario'  
+        title: 'Calendario'  
+        year: 'Año:'
+        bisiesto: 'Año bisiesto:'
+        day_initial: 'Primer día del año:'
+        generated: 'Caledario creado:' 
+        generatedactivities: 'Actividades creadas:' 
+        ver: 'Ver'
+      edit:
+        title: 'Editar calendario'
+      create:
+        created: 'Calendario creado correctamente' 
+        failed: 'Calendario fallido' 
+  calendars:
+      edit:
+        title: 'Actualizar calendario'
+      detail:
+        origin: 'Origen:'
+        state: 'Estado:'
+        description: 'Descripción:'
+        observation: 'Observaciones:'
+        citation: 'Hora de la actividad:' 
+        place: 'Lugar:'
+        notify: 'Notificar'
+        calendar_id: 'Calendario:'
+        entity_id: 'Entidad:'
+        user_id: 'Usuario:'  
+        day_vigente: 'Día activo' 
+  activities:
+      edit:
+        title: 'Actualizar actividad'        
+      create:
+        created: 'Actividad creada correctamente' 
+        failed: 'Actividad fallida' 
+      show:
+        state: 'Estado:'
+        observation: 'Observaciones:'
+        calendar_id: 'Calendario:'
+        user_id: 'Usuario:'   
+        square_id: 'Cancha'
+  activity:
+    place:
+      state: 'Estado:'
+      place_reserva: 'Horario:'
+    square:
+      name: 'Cancha'  
+    state: 'Estado:'  
+  squares:
+      new:
+        title: 'Nueva cancha'        
+      edit:
+        title: 'Actualizar cancha'        
+      create:
+        created: 'Cancha creada correctamente' 
+        failed: 'Cancha fallida' 
+      show:
+        state: 'Estado:'
+        name: 'Nombre:'
+        address: 'Ubicación:'
+      index:
+        create_square: 'Crear cancha'  
+        title: 'Cancha'  
+        name: 'Nombre:'
+        address: 'Ubicación:'
+        state: 'Estado:'
+  places:
+      new:
+        title: 'Nueva horario'        
+      edit:
+        title: 'Actualizar horario'        
+      create:
+        created: 'Horario creado correctamente' 
+        failed: 'Horario fallido' 
+      show:
+        state: 'Estado:'
+        place_reserva: 'Horario:'
+      index:
+        create_place: 'Crear horario'  
+        title: 'Horario'  
+        place_reserva: 'Horario:'
+        state: 'Estado:'
 
 
 

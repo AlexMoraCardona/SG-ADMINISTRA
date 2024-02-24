@@ -1,0 +1,31 @@
+<div class="container col-5 card p-5">
+    <br>
+    <%= form_with model: @activity do |form| %>
+        <% @activity.errors.full_messages.each do |error| %>
+            <div class="alert alert-danger" role="alert">
+                <%= error%> <%= alert %>
+            </div>
+        <% end %> 
+        <br>
+        
+        <div class="form-group">    
+            <%= form.label :state, style: "display: block" %>
+            <%= form.select(:state, [['Libre', 0], ['Reservada', 1], ['No disponible', 2], ['Vencido', 3]]) %>
+        </div>
+        <br>
+        <div class="form-group">    
+            <%= form.label :observation, style: "display: block" %>
+            <%= form.text_area :observation,  class: "form-control" %>
+        </div>
+        <br>
+        <div class="form-group">
+            <%= form.label :user_id,  style: "display: block" %>
+            <%= form.collection_select :user_id, User.all.order(id: :asc), :id, :name %>
+        </div>  
+
+        <br>    
+        <button type="submit" class="btn btn-primary"><%=t('common.submit')%></button>
+        <%= link_to '<button class="btn btn-primary" type="button">Retornar</button>'.html_safe, :back %>
+    <% end %>
+</div> 
+<br>

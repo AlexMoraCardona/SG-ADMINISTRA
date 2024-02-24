@@ -1,0 +1,8 @@
+<tr>
+    <td><%= place.id %></td>
+    <td><%= place.name_state(place.state) %></td>
+    <td><%= place.place_reserva %></td>
+
+    <td><%= link_to t('common.edit'), edit_place_path(place), class: 'btn btn-sm btn-primary'  %></td>
+
+</tr>

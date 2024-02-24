@@ -8,13 +8,14 @@ class User < ApplicationRecord
     format: { with: /\A[a-z0-9A-Z]+\z/, message: :invalid}
     validates :nro_document,  presence: true #Validar la presencia
     validates :name, presence: true #Validar la presencia
-    #validates :password,  length: { minimum: 4 }
+    validates :password_digest,  length: { minimum: 4 }
+    validates :password_digest,  presence: true #Validar la presencia
 
     before_save :downcase_attributes
 
     def label_state(state)
-        if state == 0 ; 'Activo'
-        elsif state == 1 ; 'Inactivo'
+        if state == 0 ; 'Inactivo'
+        elsif state == 1 ; 'Activo'
         end 
     end  
 

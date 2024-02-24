@@ -1,18 +1,24 @@
 
-
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="users">Usuarios</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="levels">Niveles</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
-
+<br>
+<% if Current.user.level_id == 3 then %>
+  <div class="container col-11">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="users">Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="levels">Niveles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="adm_calendars">Adm. Calendario</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="squares">Canchas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="places">Turnos</a>
+      </li>
+    </ul>
+  <div>
+<% end %>  
 

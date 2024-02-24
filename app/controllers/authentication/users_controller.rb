@@ -49,5 +49,6 @@ class Authentication::UsersController < ApplicationController
         params.require(:user).permit(:nro_document, :name, :username, :email, :password, 
         :state, :phone, :level_id)
     end    
+
 end   
 
