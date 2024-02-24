@@ -116,6 +116,8 @@ es:
       create:
         failed: 'Autenticación fallida'
         created: 'Ingreso exitoso'
+      destroy:
+        destroyed: 'Sesión cerrada'  
   shared: 
     header:
       title: 'ADMINISTRACIÓN DE CANCHAS'     

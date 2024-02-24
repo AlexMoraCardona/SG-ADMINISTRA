@@ -46,6 +46,52 @@ class ActivitiesController < ApplicationController
     def reser 
         @activity = Activity.find(params[:id])
         @activities = Activity.where("user_id = ? and state = ?",Current.user.id,1)
+
+        val = Activity.validaciones(@activity, @activities)
+        
+        if val == 10 then 
+            @activity.user_id = Current.user.id
+            @activity.state = 1
+            if @activity.save
+                redirect_to home_path, notice: 'Actividad actualizada correctamente'
+            else
+                render :edit, activities: :unprocessable_entity
+            end         
+        else
+            if val == 1 then 
+                redirect_to home_path, alert: 'El máximo de reservaciones permitidas por semana son 2.'
+            else    
+                if val == 2 then 
+                    redirect_to home_path, alert: 'No es posible hacer la reservación, la fecha esta vencida.'  
+                else    
+                    if val == 3 then 
+                        redirect_to home_path, alert: 'Actividad no se encuentra disponible para reservar'
+                    else    
+                        if val == 4 then 
+                            redirect_to home_path, alert: 'Actividad no se encuentra disponible para reservar'
+                        else
+                            if val == 0 then 
+                                redirect_to home_path, alert: 'No se pudo reservar la actividad, por favor consulte con el Administrador'
+                            end    
+                        end        
+                    end                    
+                end        
+            end    
+        end
+    end    
+
+    def reser_anterior 
+        @activity = Activity.find(params[:id])
+        @activities = Activity.where("user_id = ? and state = ?",Current.user.id,1)
+
+        val = Activity.validaciones(@activity,@activities).to_i
+        if val == 10 then
+        elsif val == 1 then 
+        elsif val == 1 then 
+        elsif val == 1 then 
+        elsif val == 1 then 
+        end    
+        el    
         contador = 0
         #la fecha de la actividad que se va a reservar
         diares = @activity.calendar.day

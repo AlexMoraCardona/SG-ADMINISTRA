@@ -40,7 +40,7 @@
                             <td><%= link_to t('common.edit'), edit_activity_path(activity), class: 'btn btn-sm btn-primary'  %></td>
                         <% else %>
                             <% if activity.state == 0 then %>
-                                <td><%= link_to t('common.reser'), reser_path(activity), class: 'btn btn-sm btn-primary'  %></td>
+                                <td><%= link_to t('common.reser'), reser_path(activity), class: 'btn btn-sm btn-primary', data: { turbo_confirm: 'Confirma que desea hacer la reserva?' }  %></td>
                             <% else %>
                                 <td></td>
                             <% end %>    

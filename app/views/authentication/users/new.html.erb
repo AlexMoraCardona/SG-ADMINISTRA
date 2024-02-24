@@ -34,6 +34,7 @@
         <div class="form-group">    
             <%= form.label :password,  style: "display: block" %>
             <%= form.password_field :password,  class: "form-control", required: true %>
+                <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Su Clave debe contener mínimo 4 caracteres de longitud.</span></div>
         </div>
         <br>
         <%= form.hidden_field :level_id, :value => 1, class: "form-control" %>
