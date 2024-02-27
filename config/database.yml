@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: SG_ADMINISTRA_production
-  username: SG_ADMINISTRA
-  password: <%= ENV["SG_ADMINISTRA_DATABASE_PASSWORD"] %>
+  username: ADMINISTRA
+  password: <%= ENV["ADMINISTRA_DATABASE_PASSWORD"] %>

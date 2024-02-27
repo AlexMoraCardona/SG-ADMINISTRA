@@ -84,6 +84,6 @@ gem 'will_paginate', '~> 4.0'
 gem 'bootstrap-will_paginate'
 
 #gemas para crear archivos xls
-gem 'rubyzip', '>= 1.2.1'
-gem 'axlsx'
-gem 'axlsx_rails'
+#gem 'rubyzip', '>= 1.2.1'
+#gem 'axlsx'
+#gem 'axlsx_rails'
